@@ -1,22 +1,8 @@
-; Script Information ===========================================================
-; Name:        ahk Tester
-; Description: blank script for testing small snippets of script
-; AHK Version: AHK 1.1.30.00
-; Author:      James Clarke JClarke.SW@Gmail.com 
-; ==============================================================================
-
-; Revision History =============================================================
-; Revision 1 (18/6/19)
-; * Initial release
-; ==============================================================================
-
 ; Load Function ================================================================
     OnLoad() {
         Global ; Assume-global mode
         Static Init := OnLoad() ; Call function
         OutputDebug, ############## COMMENCED ##############
-        Menu, Tray, Tip, AHK Tester
-        Menu, Tray, Icon, tester.ico
         
         OutputDebug, ############## STANDARD CALLS COMPLETED ##############
 
@@ -55,11 +41,6 @@
         CoordMode, Mouse, Window
 
     ;   Libraries
-        ;#Include WinClipAPI.ahk
-        ;#Include WinClip.ahk ; http://www.apathysoftworks.com/ahk/index.html & https://autohotkey.com/board/topic/74670-class-winclip-direct-clipboard-manipulations/
-        ;#Include JSON.ahk ; https://github.com/cocobelgica/AutoHotkey-JSON
-        ;#Include tf.ahk ; https://github.com/hi5/TF
-        ;#include includeTest.ahk
         #Include Chrome.ahk-master/Chrome.ahk ;https://github.com/G33kDude/Chrome.ahk
 
         global ExitString := "initiated"
@@ -76,7 +57,6 @@
     global ChromeInst 
     global PageInst
     ;WRITE VARIABLES
-    global linkingCSV := "fileLocation"
 
     
     global currentPersonBirthLocation := "INITIALISED"
@@ -277,11 +257,6 @@
     }
 
 
-    blankFunction() {
-        OutputDebug, -------------- () started --------------
-
-        OutputDebug, -------------- () finished --------------
-    }
 
 
 ; ==============================================================================
@@ -306,7 +281,6 @@
 
 
 
-    ; NotUsed --- GuiSize(GuiHwnd, EventInfo, Width, Height) {IfEqual, ErrorLevel, 1, return ; Window minimized}MenuHandler(ItemName, ItemPos, MenuName) {MsgBox, 0x40, MenuHandler, % "Item Name: " ItemName "`n". "Item Position: " ItemPos "`n". "Menu Name: " MenuName}
 ; ==============================================================================
 
 ; Close Function================================================================
